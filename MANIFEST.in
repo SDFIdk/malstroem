@@ -1,0 +1,4 @@
+exclude MANIFEST.in
+include LICENSE README.rst README.md
+recursive-include malstroem *.pyx
+recursive-include malstroem *.pxd

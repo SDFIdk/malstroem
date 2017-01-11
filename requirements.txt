@@ -1,0 +1,9 @@
+numpy
+cython
+pytest
+numpy
+click
+click-log
+gdal
+future
+scipy
