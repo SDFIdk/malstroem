@@ -75,14 +75,16 @@ These instructions are for Python v2.7 64bit. Change accordingly if you prefer a
  The biggest problem on OSX is getting GDAL to work. One known solution is via [homebrew](http://brew.sh/)
  1. Make sure homebrew is installed and you know how to use its Python (See for instance [this guide](http://docs.python-guide.org/en/latest/starting/install/osx/))
  2. Install GDAL and its Python bindings
-```bash
-brew install gdal
-```
- 3. Make sure you use the homebrew Python and install malstroem and its dependencies (If you are using a virtualenv create it using `--system-site-packages`) 
- ```bash
-pip install cython numpy scipy
-pip install git+https://github.com/Kortforsyningen/malstroem.git[speedups]
-```
+ 
+  ```
+  brew install gdal
+  ```
+ 3. Make sure you use the homebrew Python and install malstroem and its dependencies (If you are using a virtualenv create       it using `--system-site-packages`) 
+ 
+  ```
+  pip install cython numpy scipy
+  pip install git+https://github.com/Kortforsyningen/malstroem.git[speedups]
+  ```
 
 Bugs and contributions
 ----------------------
