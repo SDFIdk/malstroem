@@ -27,7 +27,7 @@ from malstroem import io, rain as raintool
 @click.command('rain')
 @click.option('-nodes', required=True, help='OGR datasource containing nodes layer')
 @click.option('-nodes_layer', default='nodes', show_default=True, help='Nodes layer name ')
-@click.option('--rain', '-r', required=True, multiple=True, type=float, help='Rain incident in mm')
+@click.option('--rain', '-r', required=True, multiple=True, type=float, help='Rain event in mm')
 @click.option('-out', required=True, help='Output OGR datasource')
 @click.option('-out_layer', default='events', show_default=True, help='Layer name of output events layer')
 @click.option('-format', type=str, default='ESRI shapefile', help='OGR driver. See OGR documentation')
@@ -35,9 +35,11 @@ from malstroem import io, rain as raintool
 @click.option('-lco', multiple=True, type=str, nargs=0, help='OGR layer creation options. See OGR documentation')
 @click_log.simple_verbosity_option()
 def process_rain(nodes, nodes_layer, rain, out, out_layer, format, dsco, lco):
-    """Calculate bluespot fill and spill volumes for specific rain incidents.
+    """Calculate bluespot fill and spill volumes for specific rain event.
 
-    Note that multiple rain incidents can be calculated at once by repeating the '-r' option.
+    The rain event is evenly distributed across the entire area.
+
+    Note that multiple rain events can be calculated at once by repeating the '-r' option.
 
     \b
     Example:

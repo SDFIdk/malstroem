@@ -70,7 +70,15 @@ malstroems generally does not do very much checking that input makes sense toget
 Vector output options
 ---------------------
 malstroem uses `OGR <http://www.gdal.org>`_ for writing vector data. Output vector data can be tweaked using OGR
-specific parameters `format`, `lco`, and `dsco` for documentation of OGR features see the documentation of
+specific parameters `format`, `lco`, and `dsco`.
+
+Example writing to `GeoPackage format <http://www.gdal.org/drv_geopackage.html>`_ from ``malstroem pourpts``:
+
+.. code-block:: console
+
+    $ malstroem pourpts -bluespots labeled.tif -depths depths.tif -watersheds wsheds.tif -dem dem.tif -format gpkg -out dbfile.gpkg -layername pourpoints
+
+For documentation of OGR features see the documentation of
 `OGR formats <http://www.gdal.org/ogr_formats.html>`_.
 
 Raster output options
@@ -268,7 +276,7 @@ Pour point are determined using one of two methods:
  * Maximum accumulated flow candidate. Requires accumulated flow
 
 The output of the two methods only differ when there are more than one pour point candidate (ie multiple threshold
-cells with identical Z for a given bluespot.
+cells with identical Z for a given bluespot).
 
 Arguments:
  * ``bluespots`` is the bluespot ID raster.
@@ -319,9 +327,9 @@ Streams are traced from the pour point of each bluespot using the flow direction
 
 A stream ends:
  * when it first enters the next downstream bluespot.
- * when it flows together with another stream
+ * when it merges with another stream
 
-When two or more streams flow together a new node of type ``junction`` is inserted and a new stream is traced downstream
+When two or more streams merge a new node of type ``junction`` is inserted and a new stream is traced downstream
 from the node.
 
 Streams stop at the border of the bluespot because routing within the bluespot will otherwise happen on a synthetic
@@ -452,7 +460,7 @@ Example:
 
 Complete chain of processes
 ---------------------------
-The complete process from DEM to fill and spill volumes for a rain event van be calculated with the
+The complete process from DEM to fill and spill volumes for a rain event can be calculated with the
 ``malstroem complete`` subcommand (see `malstroem complete`_). If you need greater control than offered by this command, you need to do the
 processing in steps using the other subcommands.
 

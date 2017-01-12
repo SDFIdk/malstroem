@@ -4,6 +4,23 @@ About malstroem
 
 History
 -------
+The malstroem Project was initiated in November 2015 by SDFE who sponsored the development of a
+cloudburst screening method to be carried out by Assoc. Prof. Thomas Balstrøm, Section of Geography &
+Geoinformatics, Institute of Geosciences and Natural Resources, University of Copenhagen. The method
+was implemented as models in ModelBuilder for ArcGIS Desktop 10.4 and documented in Balstrøm (2016,
+submitted). In August 2016 SDFE asked Septima to implement Thomas’ method in a pure Python
+environment based on open source technology, only, and by the end of December a first test version
+programmed by Asger was available. It is this version, which is presented here.
+
+The major difference in functionality is that the ArcGIS version was based on a transfer of derived
+bluespots, watersheds and streams to ArcGIS’ geometric network environment, where the final outputs
+describing the spill over in between bluespots was carried out by a custom script written in .Net and C#.
+In Asger’s implementation the geometric network component was omitted.
+
+References
+----------
+Balstrøm, T. (2016, submitted): A hydrologic screening method for storm water assessments based on
+raster processing and geometric networks. Submitted to Computers & Geosciences, Oct. 2016.
 
 Bugs and contributions
 ----------------------

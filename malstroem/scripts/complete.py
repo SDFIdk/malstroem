@@ -35,7 +35,7 @@ logger = logging.getLogger(__name__)
                                '"area > 20.5 and (maxdepth > 0.05 or volume > 2.5)"')
 @click_log.simple_verbosity_option()
 def process_all(dem, outdir, accum, filter, rain, vector):
-    """Quick option to complete process.
+    """Quick option to run all processes.
 
     \b
     Example:
