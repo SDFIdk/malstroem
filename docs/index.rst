@@ -43,7 +43,7 @@ incidents ignoring bluespots where the maximum water depth is less than 5cm:
 
 .. code-block:: console
 
-   malstroem complete -r 10 -r 30 -filter 'maxdepth > 0.5' -vector -dem dem.tif -outdir c:\outputdirectory
+   malstroem complete -r 10 -r 30 -filter "maxdepth > 0.5" -vector -dem dem.tif -outdir c:\outputdirectory
 
 The project
 -----------

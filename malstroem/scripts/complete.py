@@ -39,7 +39,7 @@ def process_all(dem, outdir, accum, filter, rain, vector):
 
     \b
     Example:
-    malstroem complete -r 10 -r 30 -filter 'volume > 2.5' -dem dem.tif -outdir ./outdir/
+    malstroem complete -r 10 -r 30 -filter "volume > 2.5" -dem dem.tif -outdir ./outdir/
     """
     # Check that outdir exists and is empty
     if not os.path.isdir(outdir) or not os.path.exists(outdir) or os.listdir(outdir):

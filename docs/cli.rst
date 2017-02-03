@@ -20,7 +20,7 @@ Available subcommands can be seen by invoking ``malstroem --help``
       To get help for a sub command use: malstroem subcommand --help
 
       Examples:
-      malstroem complete -r 10 -r 30 -filter 'volume > 2.5' -dem dem.tif -outdir ./outdir/
+      malstroem complete -r 10 -r 30 -filter "volume > 2.5" -dem dem.tif -outdir ./outdir/
       malstroem filled -dem dem.tif -out filled.tif
 
     Options:
@@ -109,7 +109,7 @@ Example:
 
 .. code-block:: console
 
-    $ malstroem complete -r 10 -r 30 -filter 'volume > 2.5' -dem dem.tif -outdir ./outdir/
+    $ malstroem complete -r 10 -r 30 -filter "volume > 2.5" -dem dem.tif -outdir ./outdir/
 
 malstroem filled
 ----------------
