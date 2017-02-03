@@ -18,7 +18,7 @@ def test_complete(tmpdir):
     assert result.exit_code == 0, result.output
     assert os.path.isfile(str(tmpdir.join('filled.tif')))
 
-    r = io.RasterReader(str(tmpdir.join('labeled.tif')))
+    r = io.RasterReader(str(tmpdir.join('bluespots.tif')))
     data = r.read()
 
     assert np.max(data) == 486, result.output
@@ -37,7 +37,7 @@ def test_complete_nofilter(tmpdir):
                                  '-outdir', str(tmpdir)])
     assert result.exit_code == 0, result.output
     assert os.path.isfile(str(tmpdir.join('filled.tif')))
-    r = io.RasterReader(str(tmpdir.join('labeled.tif')))
+    r = io.RasterReader(str(tmpdir.join('bluespots.tif')))
     data = r.read()
 
     assert np.max(data) == 523

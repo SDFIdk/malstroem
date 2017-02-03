@@ -76,7 +76,7 @@ Example writing to `GeoPackage format <http://www.gdal.org/drv_geopackage.html>`
 
 .. code-block:: console
 
-    $ malstroem pourpts -bluespots labeled.tif -depths depths.tif -watersheds wsheds.tif -dem dem.tif -format gpkg -out dbfile.gpkg -layername pourpoints
+    $ malstroem pourpts -bluespots bluespots.tif -depths depths.tif -watersheds wsheds.tif -dem dem.tif -format gpkg -out dbfile.gpkg -layername pourpoints
 
 For documentation of OGR features see the documentation of
 `OGR formats <http://www.gdal.org/ogr_formats.html>`_.
@@ -243,7 +243,7 @@ Example:
 
 .. code-block:: console
 
-    $ malstroem bspots -depths depths.tif -filter "maxdepth > 0.05 and (area > 20 or volume > 0.5)" -out labeled.tif
+    $ malstroem bspots -depths depths.tif -filter "maxdepth > 0.05 and (area > 20 or volume > 0.5)" -out bluespots.tif
 
 malstroem wsheds
 ----------------
@@ -262,7 +262,7 @@ Example:
 
 .. code-block:: console
 
-    $ malstroem wshed -bluespots labeled.tif -flowdir flowdir.tif -out wsheds.tif
+    $ malstroem wshed -bluespots bluespots.tif -flowdir flowdir.tif -out wsheds.tif
 
 malstroem pourpts
 -----------------
@@ -317,7 +317,7 @@ Example:
 
 .. code-block:: console
 
-    $ malstroem pourpts -bluespots labeled.tif -depths depths.tif -watersheds wsheds.tif -dem dem.tif -out shpdir/ -layername pourpoints
+    $ malstroem pourpts -bluespots bluespots.tif -depths depths.tif -watersheds wsheds.tif -dem dem.tif -out shpdir/ -layername pourpoints
 
 malstroem network
 -----------------
@@ -392,7 +392,7 @@ Example:
 
 .. code-block:: console
 
-    $ malstroem network -bluespots labeled.tif -flowdir flowdir.tif -pourpoints shpdir/pourpoints.shp -out shpdir/ -out_nodes_layer nodes -out_streams_layer streams
+    $ malstroem network -bluespots bluespots.tif -flowdir flowdir.tif -pourpoints shpdir/pourpoints.shp -out shpdir/ -out_nodes_layer nodes -out_streams_layer streams
 
 malstroem rain
 --------------

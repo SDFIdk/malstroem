@@ -69,7 +69,7 @@ def process_all(dem, outdir, accum, filter, rain, vector):
     # Process DEM
     filled_writer = io.RasterWriter(os.path.join(outdir, 'filled.tif'), tr, crs, nodatasubst)
     flowdir_writer = io.RasterWriter(os.path.join(outdir, 'flowdir.tif'), tr, crs)
-    depths_writer = io.RasterWriter(os.path.join(outdir, 'depths.tif'), tr, crs)
+    depths_writer = io.RasterWriter(os.path.join(outdir, 'bs_depths.tif'), tr, crs)
     accum_writer = io.RasterWriter(os.path.join(outdir, 'accum.tif'), tr, crs) if accum else None
 
     dtmtool = demtool.DemTool(dem_reader, filled_writer, flowdir_writer, depths_writer, accum_writer)
@@ -82,7 +82,7 @@ def process_all(dem, outdir, accum, filter, rain, vector):
     pourpoint_writer = io.VectorWriter(ogr_drv, outvector, 'pourpoints', None, ogr.wkbPoint, crs, dsco=ogr_dsco)
     watershed_writer = io.RasterWriter(os.path.join(outdir, 'watersheds.tif'), tr, crs, 0)
     watershed_vector_writer = io.VectorWriter(ogr_drv, outvector, 'watersheds', None, ogr.wkbMultiPolygon, crs, dsco=ogr_dsco) if vector else None
-    labeled_writer = io.RasterWriter(os.path.join(outdir, 'labeled.tif'), tr, crs, 0)
+    labeled_writer = io.RasterWriter(os.path.join(outdir, 'bluespots.tif'), tr, crs, 0)
     labeled_vector_writer = io.VectorWriter(ogr_drv, outvector, 'bluespots', None, ogr.wkbMultiPolygon, crs, dsco=ogr_dsco) if vector else None
 
     bluespot_tool = bluespots.BluespotTool(
