@@ -41,7 +41,7 @@ def process_bspots(depths, out, filter):
     """
 
     depths_reader = io.RasterReader(depths)
-    labeled_writer = io.RasterWriter(out, depths_reader.transform, depths_reader.crs)
+    labeled_writer = io.RasterWriter(out, depths_reader.transform, depths_reader.crs, 0)
     filter_function = parse_filter(filter)
 
     transform = depths_reader.transform
