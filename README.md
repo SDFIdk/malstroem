@@ -52,7 +52,7 @@ Unfortunately the above doesn't work on all platforms as malstroem uses som thir
 These instructions are for Python v2.7 64bit. Change accordingly if you prefer another version of Python.
 
  1. [Download](https://www.python.org/downloads/windows/) and install latest Python 2.7 "Windows x86-64 MSI installer" 
- 2. [Download](https://www.microsoft.com/en-us/download/details.aspx?id=44266) and install "Microsoft Visual C++ Compiler for Python 2.7"
+ 2. [Download](http://aka.ms/vcpython27) and install "Microsoft Visual C++ Compiler for Python 2.7"
  3. Go to [Christoph Gohlke](http://www.lfd.uci.edu/~gohlke/pythonlibs/) and download `numpy`, `gdal` and `scipy` wheels matching your python. For Python 2.7 64 bit it should be files ending in `cp27‑cp27m‑win_amd64.whl`
  4. Open windows command prompt and go to the scripts folder in your Python installation. In a defaut install it should be something like
   ```
