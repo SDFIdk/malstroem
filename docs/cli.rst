@@ -60,7 +60,7 @@ Help for a given subcommand is available by invoking ``malstroem subcommand --he
 
 General considerations
 ----------------------
-malstroem makes the following assumptions reagarding the input
+malstroem makes the following assumptions regarding the input
 
  * DEM horisontal and vertical units are meters.
  * All subsequent processing steps assume input data as output by the former processing step of malstroem.
